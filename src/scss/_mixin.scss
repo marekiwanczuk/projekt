@@ -1,0 +1,17 @@
+// add mixins here..
+
+@mixin min-media($breakpoint){
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+@mixin max-media($breakpoint){
+    @media (max-width: $breakpoint - 1) {
+        @content;
+    }
+}
+
+@mixin getnet($pattern-color) {
+    background: linear-gradient(to top, transparent 1px, $pattern-color 1px, $pattern-color 2px, transparent 2px), linear-gradient(to left, transparent 1px, $pattern-color 1px, $pattern-color 2px, transparent 2px);
+    background-size: 3px 3px;
+}

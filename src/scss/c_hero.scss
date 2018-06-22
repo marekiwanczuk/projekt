@@ -1,0 +1,95 @@
+.hero{
+
+    // * {
+    //     border: 1px dashed red;  
+    //   }
+
+    margin: 0;
+    color: $white;
+    background-color: $color-2-light;
+    height: 450px;
+    background-image: url(../img/hero-mob.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+    @include min-media($bpoint-tab){
+        height: 600px;
+        background-image: url(../img/hero-tab.jpg);
+    }
+
+    @include min-media($bpoint-desk){
+        background-image: url(../img/hero-desk.jpg);
+    }
+    
+    /**/
+    position: relative;
+    
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        
+        $pattern-color: rgba(0,0,0,.2);
+        //background-color: $pattern-color;
+        background: linear-gradient(to top, transparent 1px, $pattern-color 1px, $pattern-color 2px, transparent 2px), linear-gradient(to left, transparent 1px, $pattern-color 1px, $pattern-color 2px, transparent 2px);
+        background-size: 3px 3px;
+    }
+    /**/
+    &:after{
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 40%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        
+        $pattern-color: rgba(0,0,0,.2);
+        //background-color: $pattern-color;
+        background: linear-gradient(to bottom, transparent, rgba(0,0,0,.4) 3*$space);
+    }
+    
+    /**/
+    @media (min-width:1024px) and (orientation: landscape){
+        height: 100vh;
+        background-size: cover;
+        min-height: 36 * $base-unit;
+    }
+    
+    
+    
+
+    .wrapper{
+        z-index: 2;
+        height: 100%;
+    }
+
+    &-cont{
+        position: absolute;
+        left: $space;
+        
+        @include min-media($bpoint-tab){
+            left: 2*$space;
+            bottom: 3*$space;
+        }
+        @include max-media($bpoint-tab){
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        &--test-shadow{
+            @extend %simple-text-shadow;
+        }
+    }
+    // &-header{
+    // }
+    // &-text{
+    // }
+    // &-btn{
+    // }
+
+}

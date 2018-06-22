@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2018-6-6: Created with FontForge (http://fontforge.org)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20160405 at Wed Jun  6 19:07:06 2018
+ By Apache
+Copyright (c) 2018, Apache
+</metadata>
+<defs>
+<font id="Flaticon" horiz-adv-x="512" >
+  <font-face 
+    font-family="Flaticon"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="17.0195 -64 494.979 448"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+0020-F102"
+  />
+    <missing-glyph />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="200" 
+ />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" 
+d="M186.696 448c12.3584 0 22.3779 -10.0186 22.3779 -22.375v-467.247c0 -12.3584 -10.0195 -22.3779 -22.3779 -22.3779h-147.299c-12.3584 0 -22.3779 10.0195 -22.3779 22.3779v467.247c0 12.3555 10.0195 22.375 22.3779 22.375h147.299zM164.323 -19.2461v422.495
+h-102.553v-422.495h102.553zM472.6 448c12.3564 0 22.376 -10.0186 22.3789 -22.375v-467.247c0 -12.3584 -10.0225 -22.3779 -22.3789 -22.3779h-147.275c-12.3604 0 -22.3799 10.0195 -22.3799 22.3779v467.247c0 12.3555 10.0195 22.375 22.3799 22.375h147.275z
+M450.228 -19.2461v422.495h-102.53v-422.495h102.53z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" 
+d="M469.511 211.375c6.9209 -3.99316 11.1885 -11.3828 11.1904 -19.375c0 -7.99121 -4.26855 -15.3818 -11.1895 -19.375l-404.647 -233.624c-3.46387 -2.00098 -7.3252 -3.00098 -11.1875 -3.00098c-3.85938 0 -7.72168 1 -11.1875 3.00098
+c-6.91895 3.99121 -11.1885 11.3828 -11.1885 19.376v467.25c0 7.99023 4.26953 15.3818 11.1885 19.375c6.92773 3.99609 15.4492 3.99609 22.375 0zM76.0518 -2.86523l337.521 194.865l-337.521 194.866v-389.731z" />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" 
+d="M157.866 448l256 -256l-256 -256l-59.7324 59.7334l196.267 196.267l-196.267 196.267z" />
+  </font>
+</defs></svg>

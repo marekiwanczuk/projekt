@@ -1,0 +1,61 @@
+.footer{
+
+    // * {
+    //     border: 1px dashed red;  
+    //   }
+
+    color: $color-2;
+    
+    &-nav{
+
+        //clearfix
+        overflow: auto; // lub padding-bottom: 1px - nakładanie się marginów
+        //or
+        // &::after {
+        //     content: "";
+        //     clear: both;
+        //     display: table;
+        // }
+
+        margin-left: -.5*$space;
+        margin-right: -.5*$space;
+
+        &-group{
+            margin-bottom: $space;
+            display: inline-block;
+            width: 50%;
+            float: left;
+            padding-left: .5*$space;
+            padding-right: .5*$space;
+            &:nth-child(odd){
+                clear: left;
+            }
+            @include min-media($bpoint-desk){
+                width: 25%;
+                
+                &:nth-child(odd){
+                    clear: none;
+                }
+            }
+
+        }
+        &-category{
+            display: inline-block; // aby nie było klikalne puste pole obok linku
+            font-weight: $fw-bold;
+            color: $color-1;
+            margin-top: 0;
+            margin-bottom: $space;
+            //margin-bottom: .5*$space;
+        }
+
+    }
+
+    &-copyright{
+        //margin-top: $space; // można tu pokazać nakładanie się marginów
+        font-size: $font-size-body2;
+        margin-bottom: $space;
+    }
+    
+   
+
+}

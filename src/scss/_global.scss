@@ -1,0 +1,131 @@
+
+
+html{
+	font-size: 12px;
+	
+	@include min-media($bpoint-mob){
+        font-size: 16px;
+    }
+	@include min-media($bpoint-desk-xl){
+        font-size: 20px;
+    }
+}
+
+body {
+    font-size: $font-size-body;
+    line-height: 1.5;
+    font-family: $font-1;
+    color: $color-1;
+}
+
+
+//box-sizing
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+//lvha - kolejnosc stylowania a
+a {
+    text-decoration: none;
+    color: inherit;
+    // &:link,
+    // &:visited,
+    // &:hover,
+    // &:active{
+    //     color: inherit;
+    // }
+    &:hover{
+        color: $color-4;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button{
+    border: 0;
+    background: none;
+    padding: 0;
+    outline: inherit;
+}
+
+img{
+    max-width: 100%;
+    color: transparent;
+    font-size: inherit;
+}
+svg{
+    width: 100%;
+}
+
+h1, .h1{
+    font-size: $font-size-h1;
+    margin-bottom: $font-size-h1 * .75;
+}
+h2, .h2{
+    font-size: $font-size-h2;
+    margin-bottom:  $font-size-h2 * .75;
+}
+h3, .h3{
+    font-size: $font-size-h3;
+    margin-bottom:  $font-size-h3 * .75;
+}
+p{
+    margin: .5*$space 0;
+    letter-spacing: 1px;
+}
+
+.btn{
+    display: inline-block;
+    color: $color-4;
+    border: 1px solid $color-4;
+    text-transform: uppercase;
+    padding: .5*$space $space;
+    font-size: $font-size-body2;
+
+    &:hover{
+        color: $white;
+        background-color: $color-4;
+    }
+}
+
+
+.wrapper{
+    max-width: $container-max-width;
+    margin: 0 auto;
+    position: relative;
+
+    padding-left: $space;
+    padding-right: $space; 
+    @include min-media($bpoint-tab){
+        padding-left: 2*$space;
+        padding-right: 2*$space;
+    }
+
+}
+
+.component{
+    margin: $space 0;
+    @include min-media($bpoint-tab){
+        margin-bottom: 2*$space;
+        margin-top: 2*$space;
+    }
+}
+
+.ta-center{
+    text-align: center;
+}
+
+%simple-text-shadow{
+    text-shadow: 1px 1px #000;
+}
+%simple-box-shadow{
+    box-shadow: 1px 1px #000;
+}
+
+

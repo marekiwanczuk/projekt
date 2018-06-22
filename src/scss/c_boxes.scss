@@ -1,0 +1,142 @@
+.boxes{
+
+   &-cont{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -.5*$space;
+        margin-right: -.5*$space;
+        
+        /* jako opcja, gdy brakuje boksów do pełnej linii to się centrują */
+        &--centered{
+            justify-content: center;
+        }
+        
+        /* w celach prezentacyjnych */
+        &--color{
+            .box{
+                background-color: transparentize($color-4-light, .7);
+                background-clip: content-box;
+            }
+            .box-header{
+                background-color: $color-4-light;
+            }
+        }
+        &--loose{
+            .box{
+                flex: 1 1 auto; // pokazać flex: 0 1 auto;
+            }
+        }
+        &--set{
+            .box{
+                flex-grow: 1;
+                flex-shrink: 1; // default
+            }
+        }
+        &--shrink{
+            flex-wrap: nowrap;
+        }
+        
+        /* jako zadanie */
+        &--valign{
+            .box{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                // flex-direction: column;
+                .box-header{
+                    order: -1;
+                }
+            }
+        }
+   }
+
+}
+.box{
+    display: inline-block;
+    padding: .5*$space;
+    flex-basis: 100%;
+    
+    @include min-media(420px){
+        flex-basis: 50%;
+    }
+    @include min-media($bpoint-tab){
+        flex-basis: 33.3334%;
+    }
+    @include min-media($bpoint-desk){
+        flex-basis: 25%;
+    }
+    
+    &--text-center{
+        text-align: center;
+    }
+
+    &-img{
+        overflow: hidden;
+        margin-bottom: .5*$space;
+        
+        /* jako opcja */
+        &--circle{
+            border-radius: 50%;
+        }
+        
+        
+        img{
+            vertical-align: middle; // zniwelowanie odstępu na dole
+        }
+        
+        
+        &--elastic{
+            position: relative;
+            padding-bottom: 100%;
+            background-color: $color-3;
+            
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        
+        &--vcenter{
+            img{
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    
+    &-text{
+        color: $color-2;
+        font-size: $font-size-body2;
+        
+        &--center{
+            text-align: center;
+        }
+    }
+    
+    &-header{
+        display: inline-block;
+        
+        &--center{
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    /* albo też tak jeśli bez dodatkowych klas, 
+    można pokazać jako przykład selectorów */
+    /*
+    &-img--circle{        
+        ~ .box-text, + .box-header{
+            text-align: center;
+            display: block;
+        }
+    }
+    */
+/*
+&:nth-of-type(even),{
+        .box-img{
+            border-radius: 50%;
+        }
+    }*/
+}

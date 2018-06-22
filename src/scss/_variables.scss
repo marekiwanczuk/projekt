@@ -1,0 +1,36 @@
+$color-1: #333;
+$color-2: #777;
+$color-3: #d1d0d1;
+$color-4: #4a90e2;
+
+$color-1-light: #6f6f6f;
+$color-2-light: #9f9f9f;
+$color-3-light: #dcdbdc;
+$color-4-light: #77abe9;
+
+$white: #fff;
+$black: #000;
+$color-error: red;
+$color-ok: green;
+
+$base-unit: 1rem;
+
+$font-1: 'Poppins', sans-serif;
+$font-size-base: $base-unit;
+$fw-normal: 400; // przy zmianie fonta może być inna grubość
+$fw-bold: 700; // dlatego warto robić na zmiennych
+
+$font-size-body: $font-size-base;
+$font-size-body2: $font-size-base * .75;
+$font-size-h1: $font-size-base * 2.25;
+$font-size-h2: $font-size-base * 1.5;
+$font-size-h3: $font-size-base * 1.25;
+
+$space: $base-unit * 2;
+
+$bpoint-mob: 360px;
+$bpoint-tab: 768px;
+$bpoint-desk: 1200px;
+$bpoint-desk-xl: 1600px;
+
+$container-max-width: 74 * $base-unit;

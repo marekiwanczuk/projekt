@@ -1,0 +1,83 @@
+.video{
+    overflow: hidden;
+    margin: 0;
+
+    // chcemy pozycjonowac wszystko (na 100% szerokosci) wzgledem modulu, a nie wrapera 
+    position: relative;
+    .wrapper{
+        position: static;
+        // height: 100vh;
+        // padding-top: $space;
+        // padding-bottom: $space;
+        
+        // padding-bottom: 9 / 16 * 100%;
+        // wychodzi na to ze film nie ma dokladnie 16:9
+        padding-bottom: 55%;
+        
+        // @include min-media($bpoint-tab){
+        //     padding-top: 2*$space;
+        //     padding-bottom: 2*$space;
+        // }
+    }
+    
+    
+    &-header{
+        position: absolute;
+        color: $white;
+        top: $space;
+        
+        @include min-media($bpoint-tab){
+            top: 2*$space;
+        }
+    }
+
+    &-controls{
+        position: absolute;
+        bottom: $space;
+        @include min-media($bpoint-tab){
+            bottom: 2*$space;
+        }
+
+        button{
+            color: $white;
+            font-size: 2 * $base-unit;
+        }
+
+        &-pause{
+            .video:not(.is-playing) & {
+                display: none;
+            }
+        }
+
+        &-play{
+            .video.is-playing & {
+                display: none;
+            }
+        }
+    }
+
+    &-progress{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: $base-unit;
+        width: 0;
+        background-color: $color-4;
+    }
+
+
+    &-cont{
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+
+        video{
+            height: 100%;
+            // position: absolute;
+            // left: 50%;
+            // transform: translateX(-50%);
+        }
+
+
+   }
+
+}

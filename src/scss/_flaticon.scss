@@ -1,0 +1,50 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 06/06/2018 19:07
+    */
+
+    @font-face {
+      font-family: "Flaticon";
+      src: url("../fonts/Flaticon.eot");
+      src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/Flaticon.woff") format("woff"), url("../fonts/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon.svg#Flaticon") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      @font-face {
+        font-family: "Flaticon";
+        src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+      }
+    }
+
+    .fi:before {
+      display: inline-block;
+      font-family: "Flaticon";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      line-height: 1;
+      text-decoration: inherit;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+
+    .flaticon-next:before {
+      content: "\f100";
+    }
+
+    .flaticon-pause:before {
+      content: "\f101";
+    }
+
+    .flaticon-play:before {
+      content: "\f102";
+    }
+
+    $font-Flaticon-next: "\f100";
+    $font-Flaticon-pause: "\f101";
+    $font-Flaticon-play: "\f102";

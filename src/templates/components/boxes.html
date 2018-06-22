@@ -1,0 +1,171 @@
+<section class='component boxes'>
+    <div class='wrapper'>
+
+        <h2>Category</h2>
+
+        <div class='boxes-cont'>
+            <div class='box'>
+                <div class='box-img'>
+<!--
+- src='/img/zebra240.jpg' - domyślnie najmniejsze
+- vw obliczamy z calc, bo mamy stałe paddingi więc procent zajętości viewportu przez grafikę się zmienia, podzielic na ilośc boksów w linii
+- calc(100vw - 48px) bo zmieniamy wielkość rem na 12px, ale tu jak w MQ liczy się 16px zawsze
+- (min-width:1200px) 240px - muszą być px, bo viewport się zwiększa, a img pozostaje taki sam (nie chcemy już skalować)
+- tablet 192px, ale chyba już nie ma tabletów bez retiny więc od razu x2 - 384px, jeśli są to bedzie wykorzystane 240, czyli niewiele większe
+-->
+                    <img src='/img/zebra240.jpg' srcset="/img/zebra240.jpg 240w, /img/zebra384.jpg 384w, /img/zebra480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Zebra stoi na sawannie'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum</a>
+                <p class='box-text'>Photo by Adriaan Greyling from Pexels</p>
+            </div>
+            <div class='box'>
+                <div class='box-img'>
+                    <img src='/img/los240.jpg' srcset="/img/los240.jpg 240w, /img/los384.jpg 384w, /img/los480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Łoś leży na łące'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum dolor sit amet</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box box--text-center'>
+                <div class='box-img box-img--circle'>
+                    <img src='/img/koliber240.jpg' srcset="/img/koliber240.jpg 240w, /img/koliber384.jpg 384w, /img/koliber480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Koliber'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box box--text-center'>
+                <div class='box-img box-img--circle'>
+                    <img src='/img/tygrys240.jpg' srcset="/img/tygrys240.jpg 240w, /img/tygrys384.jpg 384w, /img/tygrys480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Tygrys'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='component boxes' style="display: none">
+    <div class='wrapper'>
+
+        <h2>Category 2 - niedopasowane grafiki</h2>
+
+        <div class='boxes-cont'>
+            <div class='box'>
+                <!-- elastic jako modyfikator tylko ze względów szkoleniowych, aby nie popsuć tego co jest, na zajęciach można bez -->
+                <div class='box-img box-img--elastic'>
+                    <img src='/img/hero-mob.jpg'  alt=''/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum dolor sit amet</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box'>
+                <div class='box-img box-img--elastic'>
+                    <img src='/img/koliber-portrait.jpg'  alt=''/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum dolor sit amet</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box'>
+                <div class='box-img box-img--elastic box-img--vcenter'>
+                    <img src='/img/hero-mob.jpg'  alt=''/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum dolor sit amet</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box'>
+                <div class='box-img box-img--elastic box-img--vcenter'>
+                    <img src='/img/koliber-portrait.jpg'  alt=''/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum dolor sit amet</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class='component boxes' style="display: none">
+    <div class='wrapper'>
+
+        <h2>Category 3 - basis auto, grow</h2>
+
+        <div class='boxes-cont boxes-cont--color boxes-cont--loose'>
+            <!-- flex-grow -->
+            <div class='box box--text-center'>
+                <div class='box-img'>
+                    <img src='/img/koliber240.jpg' srcset="/img/koliber240.jpg 240w, /img/koliber384.jpg 384w, /img/koliber480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Koliber'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box box--text-center'>
+                <div class='box-img'>
+                    <img src='/img/tygrys480.jpg' srcset="/img/tygrys240.jpg 240w, /img/tygrys384.jpg 384w, /img/tygrys480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Tygrys'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor Lorem ipsum dolor</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class='component boxes' style="display: none">
+    <div class='wrapper'>
+
+        <h2>Category 4 - basis set, grow </h2>
+
+        <div class='boxes-cont boxes-cont--color boxes-cont--set'>
+            <!-- flex-grow -->
+            <div class='box box--text-center'>
+                <div class='box-img'>
+                    <img src='/img/koliber240.jpg' srcset="/img/koliber240.jpg 240w, /img/koliber384.jpg 384w, /img/koliber480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Koliber'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box box--text-center'>
+                <div class='box-img'>
+                    <img src='/img/tygrys480.jpg' srcset="/img/tygrys240.jpg 240w, /img/tygrys384.jpg 384w, /img/tygrys480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Tygrys'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor Lorem ipsum dolor</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class='component boxes' style="display: none">
+    <div class='wrapper'>
+
+        <h2>Category 5 - shrink</h2>
+
+        <div class='boxes-cont boxes-cont--color boxes-cont--loose boxes-cont--shrink'>
+            <div class='box box--text-center'>
+                <div class='box-img'>
+                    <img src='/img/koliber240.jpg' srcset="/img/koliber240.jpg 240w, /img/koliber384.jpg 384w, /img/koliber480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Koliber'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box box--text-center'>
+                <div class='box-img'>
+                    <img src='/img/tygrys480.jpg' srcset="/img/tygrys240.jpg 240w, /img/tygrys384.jpg 384w, /img/tygrys480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Tygrys'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor Lorem ipsum dolor</p>
+            </div>
+            <div class='box box--text-center box--shrink'>
+                <div class='box-img'>
+                    <img src='/img/koliber240.jpg' srcset="/img/koliber240.jpg 240w, /img/koliber384.jpg 384w, /img/koliber480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Koliber'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor</p>
+            </div>
+            <div class='box box--text-center box--shrink'>
+                <div class='box-img'>
+                    <img src='/img/tygrys480.jpg' srcset="/img/tygrys240.jpg 240w, /img/tygrys384.jpg 384w, /img/tygrys480.jpg 480w" sizes="(min-width:1600px) 300px,(min-width:1200px) 240px,(min-width:768px) calc(34vw - 4rem),(min-width:420px) calc(50vw - 3rem), (min-width:360px) calc(100vw - 4rem), calc(100vw - 48px)" alt='Tygrys'/>
+                </div>
+                <a href="#" class='h3 box-header'>Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum Big Lorem ipsum</a>
+                <p class='box-text'>Lorem ipsum dolor Lorem ipsum dolor</p>
+            </div>
+        </div>
+
+    </div>
+</section>

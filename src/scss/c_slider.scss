@@ -1,0 +1,22 @@
+.slider{
+
+    // feel free styling
+
+    .wrapper{
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .swiper-container{
+        height: 50vh;
+        background-color: $color-3;
+    }
+
+    .slide-text{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 50%;
+    }
+
+}

@@ -1,0 +1,59 @@
+<section class='component form' data-video>
+    <div class='wrapper'>
+
+        <h2>Our form</h2>
+
+        <form class='form-cont' novalidate>
+
+            <div class='form-block form-block--half'>
+                <div class='form-el'>
+                    <label for='field_t'>Field for text</label>
+                    <input required name='field_t' type='text' placeholder='tekst' />
+                    <span class='form-error-msg'>Wrong text!</span>
+                </div>
+                <div class='form-el'>
+                    <label for='field_e'>Field for email</label>
+                    <input required name='field_e' type='email' placeholder='adres@poczta.pl' />
+                    <span class='form-error-msg'>Wrong email!</span>
+                </div>
+                <div class='form-el'>
+                    <label for='field_p'>Field for text with pattern (postal)</label>
+                    <input required name='field_p' type='text' pattern='[0-9]{2}-[0-9]{3}' placeholder='xx-xxx' />
+                    <span class='form-error-msg'>Wrong text!</span>
+                </div>
+            </div>
+            <div class='form-block form-block--half'>
+                <div class='form-el'>
+                    <label for='field_s'>Field for select</label>
+                    <select required name='field_s'>
+                        <option value='' selected>Select value</option>
+                        <option value='1'>Value 1</option>
+                        <option value='2'>Value 2</option>
+                    </select>
+                    <span class='form-error-msg'>Wrong value!</span>
+                </div>
+                <div class='form-el'>
+                    <label for='field_r'>Are You sure?</label>
+                    <input required name='field_r' id='field_yes' type='radio' value="yes" />
+                    <label for='field_yes'>Yes</label>
+                    <input required name='field_r' id='field_no' type='radio' value="no" />
+                    <label for='field_no'>No</label>
+                    <span class='form-error-msg'>Nothing chcecked!</span>
+                </div>
+                <div class='form-el'>
+                    <label for='field_c'>Please agree with me...</label>
+                    <input required name='field_c' id='field_cbox' type='checkbox' />
+                    <label for='field_cbox'>Checkbox label</label>
+                    <span class='form-error-msg'>Check something!</span>
+                </div>
+            </div>
+            <div class='form-block ta-center'>
+                <button class='btn' type='submit'>Send form</button>
+            </div>
+
+
+
+        </form>
+
+    </div>
+</section>

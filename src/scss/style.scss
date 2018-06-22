@@ -1,0 +1,24 @@
+// global
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+@import '_global.scss';
+
+// addons
+@import 'flaticon';
+@import 'swiper';
+
+// our modules
+@import 'c_header.scss';
+@import 'c_footer.scss';
+@import 'c_hero.scss';
+@import 'c_boxes.scss';
+@import 'c_video.scss';
+@import 'c_form.scss';
+@import 'c_graphic';
+@import 'c_yt';
+@import 'c_svg';
+@import 'c_loader';
+@import 'c_slider';
+
+

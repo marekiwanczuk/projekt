@@ -1,0 +1,181 @@
+.header{
+
+    // * {
+    //     border: 1px dashed red;  
+    //   }
+
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 2 * $space;
+    overflow: hidden;
+    color: $white;
+
+    @include min-media($bpoint-tab){
+        height: 3 * $space;
+    }
+
+    @include max-media($bpoint-desk){
+        body.open-menu &{
+            background-color: $color-1;
+            height: 100vh;
+        }
+    }
+
+    &-logo{
+        position: absolute;
+        z-index: 20;
+        top: .5 * $space;
+        left: $space;
+        width: 60px;
+        
+        @include min-media($bpoint-tab){
+            left: 2 * $space;
+            top: $space;
+        }
+
+        @include min-media($bpoint-desk){
+            top: .5 * $space;
+        }
+    }
+    
+    &-nav{
+        @extend %simple-text-shadow;
+        padding-top: 3 * $space;
+        text-align: center;
+        li, a{
+            display: block;
+            width: 100%;
+        }
+        li{
+            border-top: 1px solid $color-1-light;
+        }
+        a{
+            padding: .5 * $space;
+        }
+
+        @include min-media($bpoint-desk){
+            
+            padding-top: 0;
+            // text-align: right;
+            li, a{
+                display: inline-block;
+                width: auto;
+            }
+            li{
+                border-top: 0;
+            }
+            a{
+                padding: .9*$space .75*$space;
+                &:hover{
+                    color: inherit;
+                    box-shadow: 0 2px 0 0 $white, 0 4px 0 0 $color-4-light, 0 6px 0 0 $color-4;
+                }
+            }
+        }
+
+    }
+    
+    &-menu-btn{
+
+        $bar_height: .125 * $space;
+        
+        position: absolute;
+        top: .5 * $space;
+        right: $space;
+
+        width: $space;
+        // height: 7*$bar_height;
+
+        span{
+            // position: absolute;
+            background-color: $white;
+            display: block;
+            height: $bar_height;
+            margin: $bar_height;
+            box-shadow: 0 1px 2px rgba($black, .3);
+
+            // transform-origin: 50% 50%;
+            // left: $bar_height;
+            // right: $bar_height;
+            
+            // &:first-of-type{
+            //     top: $bar_height;
+            // }
+            // &:nth-of-type(2){
+            //     top: 3*$bar_height;
+            // }
+            // &:last-of-type{
+            //     top: 5*$bar_height;
+            // }
+
+        }
+        @include min-media($bpoint-tab){
+            top: $space;
+        }
+
+        @include min-media($bpoint-desk){
+            display: none;
+        }
+
+        // body.open-menu &{
+
+        //     span{
+        //         &:first-of-type{
+        //             top: 3*$bar_height;
+        //             transform: rotate(-45deg);
+        //         }
+        //         &:last-of-type{
+        //             top: 3*$bar_height;
+        //             transform: rotate(45deg);
+        //         }
+        //         &:nth-of-type(2){
+        //             opacity: 0;
+        //         }
+        //     }
+        
+        // }
+
+
+    }
+
+}
+
+/* fixed / animacje */
+@include min-media($bpoint-desk){
+    .header{
+        position: fixed;
+        
+        &.compact{
+            @include getnet(rgba(0,0,0,.2));
+            background-color: rgba(0,0,0,.5);
+            height: 4 * $base-unit;
+            
+            .header-nav{
+                
+                a{
+                    padding-top: .65 * $space;
+                    font-size: .75em;
+                }
+            }
+            
+            .header-logo{
+                width: 40px;
+            }
+        }
+        
+        /* animacja */
+        
+        transition: background-color .3s ease-out, height .3s ease-out;
+        
+        .header-nav{
+            a{
+                transition: padding-top .3s ease-out, font-size .3s ease-out, line-height .3s ease-out;
+            }
+        }
+        .header-logo{
+            transition: width .3s ease-out;
+        }
+    }
+}

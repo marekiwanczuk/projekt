@@ -1,0 +1,128 @@
+
+label{
+    display: block;
+    color: $color-2;
+    margin-bottom: .25 * $space;
+}
+
+input, select{
+    display: block;
+    width: 100%;
+    color: $color-2;
+    padding: .5 * $space;
+    border: none;
+    outline: 2px solid $color-3;
+    &:focus{
+        outline: 2px solid $color-4-light;
+    }
+    .is-submitted &:invalid{
+        outline: 2px solid $color-error;
+        background-color: rgba($color-error, .2);
+        + .form-error-msg{
+            // opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.form-error-msg{
+    display: block;
+    visibility: hidden;
+    // opacity: 0;
+    position: absolute;
+    bottom: -.75 * $space;
+    color: $color-error;
+    font-size: $font-size-body2;
+}
+
+
+input[type=checkbox],
+input[type=radio]{
+
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+    height: 0px; width: 1px;
+    margin: 0;
+    position: absolute;
+    
+    &:focus{
+        & + label:before{
+            color: $color-4;
+        }
+    }
+    
+    & + label{
+        position: relative;
+        user-select: none;
+        padding-left: $space;
+        margin: 0;
+        &:before{
+            content: '☐';
+            position: absolute;
+            left: 0;
+            top: -.25em;
+            font-size: 1.5em;
+        }
+    }
+    &:checked + label{
+        &:before{
+            content: '🗹';
+        } 
+    }
+
+    .is-submitted &:invalid + label{
+        color: $color-error;
+        & + .form-error-msg{
+            visibility: visible;
+        }
+    }
+
+}
+
+input[type='radio']{
+    & + label{
+        &:before{
+            content: '○';
+            top: -.45em;
+            font-size: 2em;
+        }
+    }
+    &:checked + label{
+        &:before{
+            content: '●';
+        } 
+    }
+}
+
+
+
+
+
+.form{
+    
+    &-cont{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -.5 * $space;
+        margin-right: -.5 * $space;
+    }
+
+    &-block{
+        flex-basis: 100%;
+        padding-left: .5 * $space;
+        padding-right: .5 * $space;
+        &--half{
+            @include min-media($bpoint-tab){
+                flex-basis: 50%;
+            }
+        }
+    }
+
+    &-el{
+        display: block;
+        position: relative;
+        margin-bottom: $space;
+    }
+
+
+}
